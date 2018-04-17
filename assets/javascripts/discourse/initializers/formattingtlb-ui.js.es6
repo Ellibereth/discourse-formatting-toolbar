@@ -104,6 +104,28 @@ function initializePlugin(api)
         });
       });
     }
+
+    if (siteSettings.formattingtlb_vote) {
+      api.onToolbarCreate(toolbar => {
+          toolbar.addButton({
+            id: "vote_ui_button",
+            group: "extras",
+            icon: "check-square-o",
+            perform: e => e.applySurround('[vote]', '[/vote]', 'vote_ui_default_text')
+          });
+        });
+      }
+
+      if (siteSettings.formattingtlb_unvote) {
+        api.onToolbarCreate(toolbar => {
+            toolbar.addButton({
+              id: "unvote_ui_button",
+              group: "extras",
+              icon: "minus-square-o",
+              perform: e => e.applySurround('[unvote]', '[/unvote]', 'unvote_ui_default_text')
+            });
+          });
+        }
   }
 }
 

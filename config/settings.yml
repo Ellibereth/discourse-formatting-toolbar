@@ -29,3 +29,9 @@ plugins:
   formattingtlb_size:
     default: false
     client: true
+  formattingtlb_vote:
+    default: true
+    client: true
+  formattingtlb_unvote:
+    default: true
+    client: true   
