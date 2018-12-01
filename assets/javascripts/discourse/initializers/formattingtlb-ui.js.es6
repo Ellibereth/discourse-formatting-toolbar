@@ -88,7 +88,7 @@ function initializePlugin(api)
         toolbar.addButton({
           id: "color_ui_button",
           group: "extras",
-          icon: "paint-brush",
+          icon: "palette"",
           perform: e => e.applySurround('[color=#]', '[/color]', 'color_ui_default_text')
         });
       });
@@ -110,22 +110,12 @@ function initializePlugin(api)
           toolbar.addButton({
             id: "vote_ui_button",
             group: "fontStyles",
-            icon: "check-square-o",
+            icon: "gavel",
             perform: e => e.applySurround('[vote]', '[/vote]', 'vote_ui_default_text')
           });
         });
       }
-
-      if (siteSettings.formattingtlb_unvote) {
-        api.onToolbarCreate(toolbar => {
-            toolbar.addButton({
-              id: "unvote_ui_button",
-              group: "fontStyles",
-              icon: "minus-square-o",
-              perform: e => e.applySurround('[unvote]', '[/unvote]', 'unvote_ui_default_text')
-            });
-          });
-        }
+    
   }
 }
 
