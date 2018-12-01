@@ -16,3 +16,13 @@ enabled_site_setting :formattingtlb_color
 enabled_site_setting :formattingtlb_size
 
 register_asset 'stylesheets/formatting.scss'
+
+register_svg_icon "fa-underline" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-indent" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-align-left" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-align-center" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-align-right" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-align-justify" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-palette" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-font" if respond_to?(:register_svg_icon)
+register_svg_icon "fa-gavel" if respond to?(:register_svg_icon)
