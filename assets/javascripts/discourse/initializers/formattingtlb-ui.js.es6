@@ -116,6 +116,17 @@ function initializePlugin(api)
         });
       }
     
+    if (siteSettings.formattingtlb_unvote) {
+      api.onToolbarCreate(toolbar => {
+          toolbar.addButton({
+            id: "unvote_ui_button",
+            group: "fontStyles",
+            icon: "undo",
+            perform: e => e.applySurround('[unvote]', '[/unvote]', 'unvote_ui_default_text')
+          });
+        });
+      }
+    
   }
 }
 
