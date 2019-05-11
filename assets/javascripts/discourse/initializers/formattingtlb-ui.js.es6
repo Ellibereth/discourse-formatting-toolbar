@@ -111,7 +111,7 @@ function initializePlugin(api)
             id: "vote_ui_button",
             group: "fontStyles",
             icon: "gavel",
-            perform: e => e.applySurround('[vote]', '[/vote]', 'vote_ui_default_text')
+            perform: e => e.applySurround('[vote] @', '[/vote]', 'vote_ui_default_text')
           });
         });
       }
